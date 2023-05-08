@@ -34,26 +34,11 @@
       <groupId>commons-io</groupId>
       <artifactId>commons-io</artifactId>
     </dependency>
-
+    
     <dependency>
-      <groupId>com.fasterxml.jackson.jaxrs</groupId>
-      <artifactId>jackson-jaxrs-json-provider</artifactId>
-      <!--
-      * Since version 2.10.0 this dependency comes with transitive Jakarta dependencies
-      * These trans-deps are directly included in JDKs <= Java 8 * For Java >= 9 compatible containers, we make sure to include these dependencies
-      -->
-      <exclusions>
-        <exclusion>
-          <groupId>jakarta.activation</groupId>
-          <artifactId>jakarta.activation-api</artifactId>
-        </exclusion>
-        <exclusion>
-          <groupId>jakarta.xml.bind</groupId>
-          <artifactId>jakarta.xml.bind-api</artifactId>
-        </exclusion>
-      </exclusions>
-    </dependency>
-
+      <groupId>com.fasterxml.jackson.jakarta.rs</groupId>
+      <artifactId>jackson-jakarta-rs-json-provider</artifactId>
+	</dependency>
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
       <artifactId>jackson-databind</artifactId>
@@ -66,11 +51,15 @@
 
     <!-- provided deps -->
     <dependency>
-      <groupId>org.jboss.spec.javax.servlet</groupId>
-      <artifactId>jboss-servlet-api_3.0_spec</artifactId>
+	    <groupId>jakarta.servlet</groupId>
+	    <artifactId>jakarta.servlet-api</artifactId>
       <scope>provided</scope>
     </dependency>
-
+    <dependency>
+      <groupId>jakarta.ws.rs</groupId>
+      <artifactId>jakarta.ws.rs-api</artifactId>
+      <scope>provided</scope>
+    </dependency>
     <dependency>
       <groupId>org.camunda.bpm</groupId>
       <artifactId>camunda-engine</artifactId>
@@ -96,12 +85,13 @@
       <scope>provided</scope>
     </dependency>
 
+	<!--
     <dependency>
       <groupId>com.sun.xml.bind</groupId>
       <artifactId>jaxb-impl</artifactId>
       <scope>test</scope>
     </dependency>
-
+	-->
     <!--
       needed for offline shrinkwrap (in particular CustomJacksonDateFormatTest),
       BOMs must be installed before this module is built
@@ -313,6 +303,7 @@
   <profiles>
     <profile>
       <id>distro</id>
+      <!--
       <dependencies>
         <dependency>
           <groupId>org.jboss.spec.javax.ws.rs</groupId>
@@ -320,6 +311,7 @@
           <scope>provided</scope>
         </dependency>
       </dependencies>
+      -->
       <build>
         <plugins>
           <plugin>
@@ -441,12 +433,13 @@
         <activeByDefault>true</activeByDefault>
       </activation>
       <dependencies>
+		  <!--
         <dependency>
           <groupId>javax.ws.rs</groupId>
           <artifactId>javax.ws.rs-api</artifactId>
           <version>2.0.1</version>
           <scope>provided</scope>
-        </dependency>
+        </dependency>-->
         <dependency>
           <groupId>org.glassfish.jersey.containers</groupId>
           <artifactId>jersey-container-grizzly2-http</artifactId>
@@ -540,12 +533,14 @@
       </properties>
 
       <dependencies>
+		  <!--
         <dependency>
           <groupId>javax.ws.rs</groupId>
           <artifactId>javax.ws.rs-api</artifactId>
           <version>2.0.1</version>
           <scope>provided</scope>
         </dependency>
+        -->
 
         <dependency>
           <groupId>org.apache.cxf</groupId>

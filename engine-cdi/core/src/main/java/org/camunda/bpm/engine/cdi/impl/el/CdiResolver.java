@@ -19,7 +19,7 @@ package org.camunda.bpm.engine.cdi.impl.el;
 import java.beans.FeatureDescriptor;
 import java.util.Iterator;
 
-import javax.enterprise.inject.spi.BeanManager;
+import jakarta.enterprise.inject.spi.BeanManager;
 
 import org.camunda.bpm.engine.cdi.impl.util.BeanManagerLookup;
 import org.camunda.bpm.engine.cdi.impl.util.ProgrammaticBeanLookup;
@@ -39,9 +39,9 @@ public class CdiResolver extends ELResolver {
     return BeanManagerLookup.getBeanManager();
   }
 
-  protected javax.el.ELResolver getWrappedResolver() {
+  protected jakarta.el.ELResolver getWrappedResolver() {
     BeanManager beanManager = getBeanManager();
-    javax.el.ELResolver resolver = beanManager.getELResolver();
+    jakarta.el.ELResolver resolver = beanManager.getELResolver();
     return resolver;
   }
 
@@ -89,7 +89,7 @@ public class CdiResolver extends ELResolver {
     return getWrappedResolver().invoke(wrapContext(context), base, method, paramTypes, params);
   }
 
-  protected javax.el.ELContext wrapContext(ELContext context) {
+  protected jakarta.el.ELContext wrapContext(ELContext context) {
     return new ElContextDelegate(context, getWrappedResolver());
   }
 

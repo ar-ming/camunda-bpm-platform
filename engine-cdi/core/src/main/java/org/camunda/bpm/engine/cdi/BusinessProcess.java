@@ -19,12 +19,6 @@ package org.camunda.bpm.engine.cdi;
 import java.io.Serializable;
 import java.util.Map;
 
-import javax.enterprise.context.Conversation;
-import javax.enterprise.context.RequestScoped;
-import javax.enterprise.inject.Instance;
-import javax.inject.Inject;
-import javax.inject.Named;
-
 import org.camunda.bpm.engine.ProcessEngine;
 import org.camunda.bpm.engine.ProcessEngineException;
 import org.camunda.bpm.engine.RuntimeService;
@@ -38,6 +32,12 @@ import org.camunda.bpm.engine.task.Task;
 import org.camunda.bpm.engine.variable.VariableMap;
 import org.camunda.bpm.engine.variable.impl.VariableMapImpl;
 import org.camunda.bpm.engine.variable.value.TypedValue;
+
+import jakarta.enterprise.context.Conversation;
+import jakarta.enterprise.context.RequestScoped;
+import jakarta.enterprise.inject.Instance;
+import jakarta.inject.Inject;
+import jakarta.inject.Named;
 
 /**
  * Bean supporting contextual business process management. This allows us to

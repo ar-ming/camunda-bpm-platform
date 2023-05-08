@@ -18,8 +18,8 @@ package org.camunda.bpm.engine.rest;
 
 import static io.restassured.RestAssured.given;
 import static io.restassured.path.json.JsonPath.from;
-import static org.camunda.bpm.engine.rest.util.DateTimeUtils.withTimezone;
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.camunda.bpm.engine.rest.util.DateTimeUtils.withTimezone;
 import static org.hamcrest.Matchers.equalTo;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
@@ -32,9 +32,6 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-
-import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.Response.Status;
 
 import org.camunda.bpm.engine.externaltask.ExternalTask;
 import org.camunda.bpm.engine.externaltask.ExternalTaskQuery;
@@ -52,6 +49,8 @@ import org.mockito.Mockito;
 
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
+import jakarta.ws.rs.core.MediaType;
+import jakarta.ws.rs.core.Response.Status;
 
 /**
  * @author Thorben Lindhauer

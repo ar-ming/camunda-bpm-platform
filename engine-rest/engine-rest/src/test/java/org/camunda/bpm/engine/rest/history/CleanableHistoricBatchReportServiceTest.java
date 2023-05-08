@@ -28,8 +28,6 @@ import static org.mockito.Mockito.when;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.ws.rs.core.Response.Status;
-
 import org.camunda.bpm.engine.AuthorizationException;
 import org.camunda.bpm.engine.history.CleanableHistoricBatchReport;
 import org.camunda.bpm.engine.history.CleanableHistoricBatchReportResult;
@@ -45,6 +43,7 @@ import org.mockito.Mockito;
 
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
+import jakarta.ws.rs.core.Response.Status;
 
 public class CleanableHistoricBatchReportServiceTest extends AbstractRestServiceTest {
 

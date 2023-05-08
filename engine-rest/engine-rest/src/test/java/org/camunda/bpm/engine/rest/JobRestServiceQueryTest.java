@@ -19,8 +19,8 @@ package org.camunda.bpm.engine.rest;
 import static io.restassured.RestAssured.expect;
 import static io.restassured.RestAssured.given;
 import static io.restassured.path.json.JsonPath.from;
-import static org.camunda.bpm.engine.rest.util.DateTimeUtils.withTimezone;
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.camunda.bpm.engine.rest.util.DateTimeUtils.withTimezone;
 import static org.hamcrest.Matchers.equalTo;
 import static org.mockito.Mockito.inOrder;
 import static org.mockito.Mockito.mock;
@@ -38,9 +38,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.Response.Status;
-
 import org.camunda.bpm.engine.impl.calendar.DateTimeUtil;
 import org.camunda.bpm.engine.rest.exception.InvalidRequestException;
 import org.camunda.bpm.engine.rest.helper.MockProvider;
@@ -57,6 +54,8 @@ import org.mockito.Mockito;
 
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
+import jakarta.ws.rs.core.MediaType;
+import jakarta.ws.rs.core.Response.Status;
 
 public class JobRestServiceQueryTest extends AbstractRestServiceTest {
 

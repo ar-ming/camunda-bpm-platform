@@ -24,8 +24,6 @@ import java.util.Collections;
 import java.util.Optional;
 import java.util.Set;
 
-import javax.servlet.ServletContext;
-
 import org.camunda.bpm.application.PostDeploy;
 import org.camunda.bpm.application.PreUndeploy;
 import org.camunda.bpm.container.RuntimeContainerDelegate;
@@ -45,6 +43,8 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.Resource;
 import org.springframework.util.StringUtils;
 import org.springframework.web.context.ServletContextAware;
+
+import jakarta.servlet.ServletContext;
 
 @Configuration
 public class SpringBootProcessApplication extends SpringProcessApplication {

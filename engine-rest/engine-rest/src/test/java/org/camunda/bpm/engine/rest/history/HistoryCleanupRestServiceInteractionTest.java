@@ -16,7 +16,20 @@
  */
 package org.camunda.bpm.engine.rest.history;
 
-import javax.ws.rs.core.Response.Status;
+import static io.restassured.RestAssured.given;
+import static org.hamcrest.CoreMatchers.containsString;
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.mockito.ArgumentMatchers.anyBoolean;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.List;
+
 import org.camunda.bpm.engine.HistoryService;
 import org.camunda.bpm.engine.impl.cfg.ProcessEngineConfigurationImpl;
 import org.camunda.bpm.engine.impl.jobexecutor.historycleanup.BatchWindowManager;
@@ -32,20 +45,9 @@ import org.camunda.bpm.engine.runtime.Job;
 import org.junit.Before;
 import org.junit.ClassRule;
 import org.junit.Test;
-import io.restassured.http.ContentType;
-import static io.restassured.RestAssured.given;
-import static org.mockito.Mockito.anyBoolean;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
-import static org.hamcrest.CoreMatchers.containsString;
-import static org.hamcrest.CoreMatchers.equalTo;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.List;
+import io.restassured.http.ContentType;
+import jakarta.ws.rs.core.Response.Status;
 
 public class HistoryCleanupRestServiceInteractionTest extends AbstractRestServiceTest {
 

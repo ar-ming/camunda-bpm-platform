@@ -16,6 +16,9 @@
  */
 package org.camunda.bpm.quarkus.engine.extension;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.camunda.bpm.engine.cdi.CdiJtaProcessEngineConfiguration;
 import org.camunda.bpm.engine.impl.history.HistoryLevel;
 import org.camunda.bpm.engine.impl.interceptor.CommandContextInterceptor;
@@ -25,9 +28,7 @@ import org.camunda.bpm.engine.impl.interceptor.JtaTransactionInterceptor;
 import org.camunda.bpm.engine.impl.interceptor.LogInterceptor;
 import org.camunda.bpm.engine.impl.persistence.StrongUuidGenerator;
 
-import javax.transaction.TransactionManager;
-import java.util.ArrayList;
-import java.util.List;
+import jakarta.transaction.TransactionManager;
 
 public class QuarkusProcessEngineConfiguration extends CdiJtaProcessEngineConfiguration {
 

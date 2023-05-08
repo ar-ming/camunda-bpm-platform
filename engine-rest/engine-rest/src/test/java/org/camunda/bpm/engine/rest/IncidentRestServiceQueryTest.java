@@ -35,7 +35,7 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
-import javax.ws.rs.core.Response.Status;
+import jakarta.ws.rs.core.Response.Status;
 
 import org.camunda.bpm.engine.impl.calendar.DateTimeUtil;
 import org.camunda.bpm.engine.rest.exception.InvalidRequestException;

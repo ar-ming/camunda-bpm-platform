@@ -27,8 +27,6 @@ import static org.mockito.Mockito.when;
 import java.util.HashSet;
 import java.util.Set;
 
-import javax.servlet.Filter;
-
 import org.camunda.bpm.spring.boot.starter.webapp.filter.LazyDelegateFilter.InitHook;
 import org.junit.Before;
 import org.junit.Test;
@@ -38,6 +36,8 @@ import org.mockito.MockedStatic;
 import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
 import org.springframework.context.ApplicationContext;
+
+import jakarta.servlet.Filter;
 
 @RunWith(MockitoJUnitRunner.class)
 public class LazyInitRegistrationTest {

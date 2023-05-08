@@ -21,7 +21,7 @@ import static io.restassured.RestAssured.given;
 import static io.restassured.path.json.JsonPath.from;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.Matchers.containsString;
-import static org.mockito.Mockito.anyString;
+import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.verifyNoMoreInteractions;
@@ -31,8 +31,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
-import javax.ws.rs.core.Response.Status;
 
 import org.camunda.bpm.engine.AuthorizationException;
 import org.camunda.bpm.engine.history.CleanableHistoricCaseInstanceReport;
@@ -49,6 +47,7 @@ import org.mockito.Mockito;
 
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
+import jakarta.ws.rs.core.Response.Status;
 
 public class CleanableHistoricCaseInstanceReportServiceTest extends AbstractRestServiceTest {
 

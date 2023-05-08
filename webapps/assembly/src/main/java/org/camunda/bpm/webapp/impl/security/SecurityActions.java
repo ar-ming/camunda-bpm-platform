@@ -16,7 +16,6 @@
  */
 package org.camunda.bpm.webapp.impl.security;
 
-import javax.servlet.ServletException;
 import java.io.IOException;
 import java.util.List;
 
@@ -26,6 +25,8 @@ import org.camunda.bpm.engine.ProcessEngine;
 import org.camunda.bpm.webapp.impl.security.auth.Authentication;
 import org.camunda.bpm.webapp.impl.security.auth.Authentications;
 import org.camunda.bpm.webapp.impl.security.auth.UserAuthentication;
+
+import jakarta.servlet.ServletException;
 
 /**
  * @author Daniel Meyer

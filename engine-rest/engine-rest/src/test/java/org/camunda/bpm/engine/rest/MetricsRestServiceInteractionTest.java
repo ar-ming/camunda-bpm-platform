@@ -16,11 +16,11 @@
  */
 package org.camunda.bpm.engine.rest;
 
+import static io.restassured.RestAssured.given;
 import static org.camunda.bpm.engine.rest.util.DateTimeUtils.DATE_FORMAT_WITH_TIMEZONE;
 import static org.camunda.bpm.engine.rest.util.DateTimeUtils.withTimezone;
-import static org.hamcrest.Matchers.*;
-import static io.restassured.RestAssured.given;
-import static org.mockito.Mockito.any;
+import static org.hamcrest.Matchers.equalTo;
+import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.times;
@@ -29,7 +29,6 @@ import static org.mockito.Mockito.verifyNoMoreInteractions;
 import static org.mockito.Mockito.when;
 
 import java.util.Date;
-import javax.ws.rs.core.Response.Status;
 
 import org.camunda.bpm.engine.AuthorizationException;
 import org.camunda.bpm.engine.ManagementService;
@@ -40,6 +39,8 @@ import org.camunda.bpm.engine.rest.util.container.TestContainerRule;
 import org.junit.Before;
 import org.junit.ClassRule;
 import org.junit.Test;
+
+import jakarta.ws.rs.core.Response.Status;
 
 /**
  * @author Daniel Meyer

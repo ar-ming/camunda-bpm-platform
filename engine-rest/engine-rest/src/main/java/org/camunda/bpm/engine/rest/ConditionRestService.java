@@ -18,13 +18,13 @@ package org.camunda.bpm.engine.rest;
 
 import java.util.List;
 
-import javax.ws.rs.Consumes;
-import javax.ws.rs.POST;
-import javax.ws.rs.Produces;
-import javax.ws.rs.core.MediaType;
-
 import org.camunda.bpm.engine.rest.dto.condition.EvaluationConditionDto;
 import org.camunda.bpm.engine.rest.dto.runtime.ProcessInstanceDto;
+
+import jakarta.ws.rs.Consumes;
+import jakarta.ws.rs.POST;
+import jakarta.ws.rs.Produces;
+import jakarta.ws.rs.core.MediaType;
 
 @Produces(MediaType.APPLICATION_JSON)
 public interface ConditionRestService {

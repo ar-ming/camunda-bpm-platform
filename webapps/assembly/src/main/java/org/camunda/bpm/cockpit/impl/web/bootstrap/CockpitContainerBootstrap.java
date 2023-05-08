@@ -16,13 +16,13 @@
  */
 package org.camunda.bpm.cockpit.impl.web.bootstrap;
 
-import javax.servlet.ServletContextEvent;
-import javax.servlet.ServletContextListener;
-
 import org.camunda.bpm.cockpit.Cockpit;
 import org.camunda.bpm.cockpit.impl.DefaultCockpitRuntimeDelegate;
 import org.camunda.bpm.container.RuntimeContainerDelegate;
 import org.camunda.bpm.engine.rest.util.WebApplicationUtil;
+
+import jakarta.servlet.ServletContextEvent;
+import jakarta.servlet.ServletContextListener;
 
 /**
  * A servlet context listener that bootstraps cockpit on a

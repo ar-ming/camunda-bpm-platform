@@ -21,8 +21,8 @@ import org.camunda.bpm.engine.rest.dto.management.JobDefinitionSuspensionStateDt
 import org.camunda.bpm.engine.rest.dto.runtime.JobDefinitionPriorityDto;
 import org.camunda.bpm.engine.rest.dto.runtime.RetriesDto;
 
-import javax.ws.rs.*;
-import javax.ws.rs.core.MediaType;
+import jakarta.ws.rs.*;
+import jakarta.ws.rs.core.MediaType;
 
 /**
  * @author roman.smirnov

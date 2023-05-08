@@ -16,13 +16,15 @@
  */
 package org.camunda.bpm.engine.rest.filter;
 
-import javax.servlet.*;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletRequestWrapper;
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.PushbackInputStream;
 import java.io.InputStream;
+import java.io.PushbackInputStream;
+
+import jakarta.servlet.ReadListener;
+import jakarta.servlet.ServletInputStream;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletRequestWrapper;
 
 /**
  * @author Tassilo Weidner
@@ -69,6 +71,24 @@ public class EmptyBodyFilter extends AbstractEmptyBodyFilter {
           public boolean markSupported() {
             return inputStream.markSupported();
           }
+
+		@Override
+		public boolean isFinished() {
+			// TODO Auto-generated method stub
+			return false;
+		}
+
+		@Override
+		public boolean isReady() {
+			// TODO Auto-generated method stub
+			return false;
+		}
+
+		@Override
+		public void setReadListener(ReadListener readListener) {
+			// TODO Auto-generated method stub
+			
+		}
 
         };
       }

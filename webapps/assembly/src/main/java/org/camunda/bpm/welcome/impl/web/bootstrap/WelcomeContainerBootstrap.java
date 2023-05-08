@@ -16,12 +16,12 @@
  */
 package org.camunda.bpm.welcome.impl.web.bootstrap;
 
-import javax.servlet.ServletContextEvent;
-import javax.servlet.ServletContextListener;
-
 import org.camunda.bpm.container.RuntimeContainerDelegate;
 import org.camunda.bpm.welcome.Welcome;
 import org.camunda.bpm.welcome.impl.DefaultWelcomeRuntimeDelegate;
+
+import jakarta.servlet.ServletContextEvent;
+import jakarta.servlet.ServletContextListener;
 
 /**
  * @author Daniel Meyer

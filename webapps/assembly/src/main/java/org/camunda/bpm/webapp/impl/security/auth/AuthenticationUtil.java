@@ -25,8 +25,7 @@ import java.util.Collections;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
+
 import org.camunda.bpm.engine.AuthorizationService;
 import org.camunda.bpm.engine.ProcessEngine;
 import org.camunda.bpm.engine.identity.Group;
@@ -35,6 +34,9 @@ import org.camunda.bpm.engine.identity.User;
 import org.camunda.bpm.engine.impl.util.ClockUtil;
 import org.camunda.bpm.webapp.impl.WebappLogger;
 import org.camunda.bpm.webapp.impl.util.ProcessEngineUtil;
+
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpSession;
 
 public class AuthenticationUtil {
 

@@ -19,7 +19,7 @@ package org.camunda.bpm.engine.rest.impl;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.util.ArrayList;
 import java.util.List;
-import javax.ws.rs.core.UriInfo;
+import jakarta.ws.rs.core.UriInfo;
 import org.camunda.bpm.engine.ProcessEngine;
 import org.camunda.bpm.engine.rest.EventSubscriptionRestService;
 import org.camunda.bpm.engine.rest.dto.CountResultDto;

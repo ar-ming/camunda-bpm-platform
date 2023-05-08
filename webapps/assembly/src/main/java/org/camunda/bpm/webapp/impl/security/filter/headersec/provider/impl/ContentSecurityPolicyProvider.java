@@ -16,13 +16,14 @@
  */
 package org.camunda.bpm.webapp.impl.security.filter.headersec.provider.impl;
 
-import org.camunda.bpm.webapp.impl.security.filter.headersec.provider.HeaderSecurityProvider;
-import org.camunda.bpm.webapp.impl.util.ServletFilterUtil;
-
-import javax.servlet.ServletContext;
 import java.util.Base64;
 import java.util.Map;
 import java.util.concurrent.ThreadLocalRandom;
+
+import org.camunda.bpm.webapp.impl.security.filter.headersec.provider.HeaderSecurityProvider;
+import org.camunda.bpm.webapp.impl.util.ServletFilterUtil;
+
+import jakarta.servlet.ServletContext;
 
 public class ContentSecurityPolicyProvider extends HeaderSecurityProvider {
 

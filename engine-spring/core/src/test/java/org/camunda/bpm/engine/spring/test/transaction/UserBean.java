@@ -16,15 +16,14 @@
  */
 package org.camunda.bpm.engine.spring.test.transaction;
 
+import static org.junit.Assert.assertEquals;
+
 import javax.sql.DataSource;
 
 import org.camunda.bpm.engine.RuntimeService;
 import org.camunda.bpm.engine.TaskService;
-import org.springframework.beans.factory.annotation.Required;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.transaction.annotation.Transactional;
-
-import static org.junit.Assert.assertEquals;
 
 /**
  * @author Tom Baeyens
@@ -67,17 +66,17 @@ public class UserBean {
 
   // getters and setters //////////////////////////////////////////////////////
   
-  @Required
+//  @Required
   public void setRuntimeService(RuntimeService runtimeService) {
     this.runtimeService = runtimeService;
   }
   
-  @Required
+//  @Required
   public void setTaskService(TaskService taskService) {
     this.taskService = taskService;
   }
 
-  @Required
+//  @Required
   public void setDataSource(DataSource dataSource) {
     this.dataSource = dataSource;
   }

@@ -21,7 +21,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
-public abstract class DateTimeUtils {
+public class DateTimeUtils {
 
   public static final SimpleDateFormat DATE_FORMAT_WITHOUT_TIMEZONE = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
   public static final SimpleDateFormat DATE_FORMAT_WITH_TIMEZONE = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSZ");
@@ -29,7 +29,7 @@ public abstract class DateTimeUtils {
   /**
    * Converts date string without timezone to the one with timezone.
    * @param dateString
-   * @return
+   * @return 
    */
   public static String withTimezone(String dateString) {
     final Date parse;

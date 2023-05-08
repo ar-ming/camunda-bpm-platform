@@ -20,15 +20,15 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.Map;
 
-import javax.servlet.ServletContextEvent;
-import javax.servlet.ServletContextListener;
-
 import org.camunda.bpm.engine.ProcessEngineException;
 import org.camunda.bpm.engine.impl.util.ReflectUtil;
 import org.camunda.bpm.engine.rest.cache.Cache;
 import org.camunda.bpm.engine.rest.hal.Hal;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+
+import jakarta.servlet.ServletContextEvent;
+import jakarta.servlet.ServletContextListener;
 
 public class HalRelationCacheBootstrap implements ServletContextListener {
 

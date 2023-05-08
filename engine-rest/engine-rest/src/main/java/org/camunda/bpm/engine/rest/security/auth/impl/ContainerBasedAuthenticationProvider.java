@@ -18,12 +18,12 @@ package org.camunda.bpm.engine.rest.security.auth.impl;
 
 import java.security.Principal;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
 import org.camunda.bpm.engine.ProcessEngine;
 import org.camunda.bpm.engine.rest.security.auth.AuthenticationProvider;
 import org.camunda.bpm.engine.rest.security.auth.AuthenticationResult;
+
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 public class ContainerBasedAuthenticationProvider implements AuthenticationProvider {
 

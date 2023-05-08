@@ -22,7 +22,7 @@ import static org.camunda.bpm.engine.rest.util.DateTimeUtils.DATE_FORMAT_WITH_TI
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.hasItems;
 import static org.hamcrest.Matchers.is;
-import static org.mockito.Mockito.eq;
+import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.verifyNoMoreInteractions;
@@ -30,8 +30,6 @@ import static org.mockito.Mockito.when;
 
 import java.util.Date;
 import java.util.List;
-
-import javax.ws.rs.core.Response.Status;
 
 import org.camunda.bpm.engine.history.HistoricActivityStatistics;
 import org.camunda.bpm.engine.history.HistoricActivityStatisticsQuery;
@@ -49,6 +47,7 @@ import org.mockito.Mockito;
 
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
+import jakarta.ws.rs.core.Response.Status;
 
 /**
  *

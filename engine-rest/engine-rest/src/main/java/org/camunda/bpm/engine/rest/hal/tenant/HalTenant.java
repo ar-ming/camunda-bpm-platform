@@ -16,7 +16,7 @@
  */
 package org.camunda.bpm.engine.rest.hal.tenant;
 
-import javax.ws.rs.core.UriBuilder;
+import jakarta.ws.rs.core.UriBuilder;
 
 import org.camunda.bpm.engine.identity.Tenant;
 import org.camunda.bpm.engine.rest.TenantRestService;

@@ -16,14 +16,16 @@
  */
 package org.camunda.bpm.application.impl;
 
-import javax.ejb.SessionContext;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
+
 import org.camunda.bpm.application.ProcessApplicationInterface;
 import org.camunda.bpm.application.ProcessApplicationReference;
 import org.camunda.bpm.engine.ManagementService;
 import org.camunda.bpm.engine.delegate.JavaDelegate;
 import org.camunda.bpm.engine.impl.ProcessEngineLogger;
+
+import jakarta.ejb.SessionContext;
 
 /**
  * <p>Common base class for writing EJB process applications.</p>

@@ -25,7 +25,7 @@ import org.camunda.bpm.engine.rest.dto.history.HistoricExternalTaskLogDto;
 import org.camunda.bpm.engine.rest.exception.InvalidRequestException;
 import org.camunda.bpm.engine.rest.sub.history.HistoricExternalTaskLogResource;
 
-import javax.ws.rs.core.Response.Status;
+import jakarta.ws.rs.core.Response.Status;
 
 public class HistoricExternalTaskLogResourceImpl implements HistoricExternalTaskLogResource {
 

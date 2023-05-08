@@ -41,8 +41,8 @@ import org.mockito.InOrder;
 import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
 
-import javax.servlet.ServletContextEvent;
-import javax.ws.rs.core.Response.Status;
+import jakarta.servlet.ServletContextEvent;
+import jakarta.ws.rs.core.Response.Status;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;

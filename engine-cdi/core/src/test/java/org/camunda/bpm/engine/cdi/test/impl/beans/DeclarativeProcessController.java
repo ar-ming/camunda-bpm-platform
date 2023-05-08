@@ -16,8 +16,8 @@
  */
 package org.camunda.bpm.engine.cdi.test.impl.beans;
 
-import javax.enterprise.context.Dependent;
-import javax.inject.Inject;
+import jakarta.enterprise.context.Dependent;
+import jakarta.inject.Inject;
 
 import org.camunda.bpm.engine.cdi.annotation.CompleteTask;
 import org.camunda.bpm.engine.cdi.annotation.ProcessVariable;

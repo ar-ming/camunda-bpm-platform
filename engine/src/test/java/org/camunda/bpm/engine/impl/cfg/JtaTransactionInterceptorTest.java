@@ -21,8 +21,8 @@ import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.when;
 
 import java.sql.SQLException;
-import javax.transaction.RollbackException;
-import javax.transaction.TransactionManager;
+import jakarta.transaction.RollbackException;
+import jakarta.transaction.TransactionManager;
 import org.camunda.bpm.engine.CrdbTransactionRetryException;
 import org.camunda.bpm.engine.impl.db.sql.DbSqlSessionFactory;
 import org.camunda.bpm.engine.impl.interceptor.CommandInterceptor;

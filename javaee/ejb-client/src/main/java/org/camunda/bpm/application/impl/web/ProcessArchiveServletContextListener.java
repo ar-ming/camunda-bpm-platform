@@ -16,13 +16,13 @@
  */
 package org.camunda.bpm.application.impl.web;
 
-import javax.ejb.EJB;
-import javax.servlet.ServletContextEvent;
-import javax.servlet.ServletContextListener;
+import jakarta.servlet.ServletContextEvent;
+import jakarta.servlet.ServletContextListener;
 
 import org.camunda.bpm.application.ProcessApplicationInfo;
 import org.camunda.bpm.application.ProcessApplicationInterface;
-import org.camunda.bpm.application.impl.ejb.DefaultEjbProcessApplication;
+
+import jakarta.ejb.EJB;
 
 
 /**

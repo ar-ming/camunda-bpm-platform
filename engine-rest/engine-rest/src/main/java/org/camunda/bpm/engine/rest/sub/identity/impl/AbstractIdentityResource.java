@@ -22,7 +22,7 @@ import org.camunda.bpm.engine.authorization.Resource;
 import org.camunda.bpm.engine.rest.exception.InvalidRequestException;
 import org.camunda.bpm.engine.rest.impl.AbstractAuthorizedRestResource;
 
-import javax.ws.rs.core.Response.Status;
+import jakarta.ws.rs.core.Response.Status;
 
 /**
  * @author Daniel Meyer

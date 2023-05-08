@@ -88,13 +88,12 @@
       <artifactId>wiremock-jre8-standalone</artifactId>
       <scope>test</scope>
     </dependency>
-
     <!-- required for wiremock-jre8-standalone - see CAM-14755 -->
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-jdk14</artifactId>
     </dependency>
-
+<!--
     <dependency>
       <groupId>org.jboss.spec</groupId>
       <artifactId>jboss-javaee-6.0</artifactId>
@@ -107,14 +106,23 @@
         </exclusion>
       </exclusions>
     </dependency>
-
+-->
     <dependency>
-      <groupId>javax.enterprise.concurrent</groupId>
-      <artifactId>javax.enterprise.concurrent-api</artifactId>
-      <version>1.0</version>
+      <groupId>jakarta.ejb</groupId>
+      <artifactId>jakarta.ejb-api</artifactId>
       <scope>provided</scope>
     </dependency>
-
+    <dependency>
+      <groupId>jakarta.servlet</groupId>
+      <artifactId>jakarta.servlet-api</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>jakarta.enterprise.concurrent</groupId>
+      <artifactId>jakarta.enterprise.concurrent-api</artifactId>
+      <version>3.0.2</version>
+      <scope>test</scope>
+    </dependency>
     <dependency>
       <groupId>org.camunda.bpm.javaee</groupId>
       <artifactId>camunda-ejb-client</artifactId>
@@ -250,6 +258,13 @@
       <scope>test</scope>
     </dependency>
 
+    <dependency>
+    	<groupId>org.camunda.bpm.qa</groupId>
+    	<artifactId>
+    		camunda-qa-integration-tests-engine-jakarta
+    	</artifactId>
+    	<version>7.20.0-SNAPSHOT</version>
+    </dependency>
   </dependencies>
 
   <build>

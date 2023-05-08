@@ -24,20 +24,18 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
 
-import javax.naming.Context;
-import javax.naming.InitialContext;
-import javax.naming.NamingException;
-
 import java.io.File;
 import java.io.UnsupportedEncodingException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLDecoder;
 
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+
 import org.camunda.bpm.container.impl.tomcat.deployment.TomcatParseBpmPlatformXmlStep;
-import org.junit.Rule;
 import org.junit.Test;
-import org.springframework.mock.jndi.SimpleNamingContext;
 
 /**
  * Checks the correct retrieval of bpm-platform.xml file through JNDI,
@@ -63,8 +61,8 @@ public class BpmPlatformXmlLocationTest {
   private static final String BPM_PLATFORM_XML_LOCATION_URL_HTTP_PROTOCOL = "http://localhost:8080/camunda/" + BPM_PLATFORM_XML_FILE;
   private static final String BPM_PLATFORM_XML_LOCATION_URL_HTTPS_PROTOCOL = "https://localhost:8080/camunda/" + BPM_PLATFORM_XML_FILE;
 
-  @Rule
-  public MockInitialContextRule initialContextRule = new MockInitialContextRule(new SimpleNamingContext());
+//  @Rule
+//  public MockInitialContextRule initialContextRule = new MockInitialContextRule(new SimpleNamingContext());
 
   @Test
   public void checkValidBpmPlatformXmlResourceLocationForUrl() throws NamingException, MalformedURLException {

@@ -16,10 +16,10 @@
  */
 package org.camunda.bpm.engine.rest;
 
-import javax.servlet.ServletContextEvent;
-import javax.servlet.ServletContextListener;
-
 import org.camunda.bpm.engine.rest.mapper.JacksonConfigurator;
+
+import jakarta.servlet.ServletContextEvent;
+import jakarta.servlet.ServletContextListener;
 
 public class CustomJacksonDateFormatListener implements ServletContextListener {
 

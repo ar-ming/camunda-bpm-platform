@@ -16,6 +16,12 @@
  */
 package org.camunda.bpm.spring.boot.starter.webapp.filter.authcache.it;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
+
 import org.camunda.bpm.engine.IdentityService;
 import org.camunda.bpm.engine.impl.util.ClockUtil;
 import org.camunda.bpm.spring.boot.starter.webapp.filter.util.HttpClientRule;
@@ -26,16 +32,10 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.web.server.LocalServerPort;
+import org.springframework.boot.test.web.server.LocalServerPort;
 import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit4.SpringRunner;
-
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
-
-import static org.assertj.core.api.Assertions.assertThat;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = { TestApplication.class }, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)

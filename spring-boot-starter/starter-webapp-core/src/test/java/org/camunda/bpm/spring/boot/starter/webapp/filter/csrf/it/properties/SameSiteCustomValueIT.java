@@ -16,6 +16,8 @@
  */
 package org.camunda.bpm.spring.boot.starter.webapp.filter.csrf.it.properties;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 import org.camunda.bpm.spring.boot.starter.property.WebappProperty;
 import org.camunda.bpm.spring.boot.starter.webapp.filter.util.HttpClientRule;
 import org.camunda.bpm.spring.boot.starter.webapp.filter.util.TestApplication;
@@ -23,12 +25,10 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.web.server.LocalServerPort;
+import org.springframework.boot.test.web.server.LocalServerPort;
 import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit4.SpringRunner;
-
-import static org.assertj.core.api.Assertions.assertThat;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = { TestApplication.class }, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)

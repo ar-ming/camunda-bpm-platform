@@ -26,7 +26,11 @@
       <artifactId>camunda-engine-rest-core</artifactId>
       <version>${project.version}</version>
     </dependency>
-
+    <dependency>
+      <groupId>jakarta.ws.rs</groupId>
+      <artifactId>jakarta.ws.rs-api</artifactId>
+      <scope>provided</scope>
+    </dependency>
     <!-- dependencies only used for assemblies should be scope provided -->
     <dependency>
       <groupId>org.camunda.bpm</groupId>
@@ -35,7 +39,7 @@
       <classifier>sources</classifier>
       <scope>provided</scope>
     </dependency>
-
+	<!--
     <dependency>
       <groupId>org.camunda.bpm</groupId>
       <artifactId>camunda-engine-rest-core</artifactId>
@@ -43,7 +47,7 @@
       <classifier>tests</classifier>
       <scope>provided</scope>
     </dependency>
-
+	-->
     <dependency>
       <groupId>org.jboss.resteasy</groupId>
       <artifactId>resteasy-jaxrs</artifactId>

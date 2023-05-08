@@ -18,11 +18,11 @@ package org.camunda.bpm.webapp.impl.security.filter;
 
 import java.util.Arrays;
 
-import javax.servlet.FilterConfig;
-
 import org.camunda.bpm.engine.ProcessEngineException;
 import org.camunda.bpm.webapp.impl.security.filter.util.CookieConstants;
 import org.camunda.bpm.webapp.impl.util.ServletFilterUtil;
+
+import jakarta.servlet.FilterConfig;
 
 public class CookieConfigurator {
 

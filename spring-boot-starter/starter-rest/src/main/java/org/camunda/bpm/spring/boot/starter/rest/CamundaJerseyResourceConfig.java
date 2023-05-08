@@ -16,12 +16,13 @@
  */
 package org.camunda.bpm.spring.boot.starter.rest;
 
-import javax.ws.rs.ApplicationPath;
 import org.camunda.bpm.engine.rest.impl.CamundaRestResources;
 import org.glassfish.jersey.jackson.JacksonFeature;
 import org.glassfish.jersey.server.ResourceConfig;
 import org.slf4j.Logger;
 import org.springframework.beans.factory.InitializingBean;
+
+import jakarta.ws.rs.ApplicationPath;
 
 @ApplicationPath("/engine-rest")
 public class CamundaJerseyResourceConfig extends ResourceConfig implements InitializingBean {

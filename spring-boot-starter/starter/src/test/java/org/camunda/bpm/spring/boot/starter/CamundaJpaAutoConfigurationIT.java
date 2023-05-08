@@ -20,8 +20,6 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.fail;
 
-import javax.transaction.Transactional;
-
 import org.camunda.bpm.engine.runtime.ProcessInstance;
 import org.camunda.bpm.spring.boot.starter.test.nonpa.TestApplication;
 import org.camunda.bpm.spring.boot.starter.test.nonpa.jpa.domain.TestEntity;
@@ -33,6 +31,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 import org.springframework.test.context.junit4.SpringRunner;
+
+import jakarta.transaction.Transactional;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = { TestApplication.class },

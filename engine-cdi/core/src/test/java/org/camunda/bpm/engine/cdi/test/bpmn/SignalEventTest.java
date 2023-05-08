@@ -20,9 +20,9 @@ import static org.junit.Assert.assertEquals;
 
 import java.util.HashMap;
 
-import javax.enterprise.context.Dependent;
-import javax.inject.Inject;
-import javax.inject.Named;
+import jakarta.enterprise.context.Dependent;
+import jakarta.inject.Inject;
+import jakarta.inject.Named;
 
 import org.camunda.bpm.engine.RuntimeService;
 import org.camunda.bpm.engine.cdi.BusinessProcess;

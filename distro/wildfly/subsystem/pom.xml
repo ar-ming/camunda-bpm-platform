@@ -38,21 +38,21 @@
 
     <dependency>
       <groupId>org.wildfly</groupId>
-      <artifactId>wildfly-ejb3</artifactId>
+      <artifactId>wildfly-ejb3-jakarta</artifactId>
       <version>${version.wildfly}</version>
       <scope>provided</scope>
     </dependency>
     
     <dependency>
       <groupId>org.wildfly</groupId>
-      <artifactId>wildfly-connector</artifactId>
+      <artifactId>wildfly-connector-jakarta</artifactId>
       <version>${version.wildfly}</version>
       <scope>provided</scope>
     </dependency>
     
     <dependency>
       <groupId>org.wildfly</groupId>
-      <artifactId>wildfly-web-common</artifactId>
+      <artifactId>wildfly-web-common-jakarta</artifactId>
       <version>${version.wildfly}</version>
       <scope>provided</scope>
       <exclusions>

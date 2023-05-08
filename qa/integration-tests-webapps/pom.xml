@@ -106,6 +106,7 @@
       <scope>test</scope>
     </dependency>
 
+	<!--
     <dependency>
       <groupId>org.jboss.spec</groupId>
       <artifactId>jboss-javaee-6.0</artifactId>
@@ -118,7 +119,13 @@
         </exclusion>
       </exclusions>
     </dependency>
-
+	-->
+	<dependency>
+	    <groupId>jakarta.platform</groupId>
+	    <artifactId>jakarta.jakartaee-bom</artifactId>
+	    <type>pom</type>
+	    <scope>provided</scope>
+	</dependency> 	
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>

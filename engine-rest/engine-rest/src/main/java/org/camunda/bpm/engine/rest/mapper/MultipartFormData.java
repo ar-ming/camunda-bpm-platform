@@ -20,8 +20,8 @@ import org.apache.commons.fileupload.FileItemStream;
 import org.camunda.bpm.engine.impl.util.IoUtil;
 import org.camunda.bpm.engine.rest.exception.RestException;
 
-import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.Response.Status;
+import jakarta.ws.rs.core.MediaType;
+import jakarta.ws.rs.core.Response.Status;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.HashMap;

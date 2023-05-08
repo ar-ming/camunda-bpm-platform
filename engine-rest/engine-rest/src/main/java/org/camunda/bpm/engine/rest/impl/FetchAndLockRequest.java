@@ -22,7 +22,7 @@ import org.camunda.bpm.engine.impl.identity.Authentication;
 import org.camunda.bpm.engine.impl.util.ClockUtil;
 import org.camunda.bpm.engine.rest.dto.externaltask.FetchExternalTasksExtendedDto;
 
-import javax.ws.rs.container.AsyncResponse;
+import jakarta.ws.rs.container.AsyncResponse;
 
 /**
  * @author Tassilo Weidner

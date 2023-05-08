@@ -16,17 +16,17 @@
  */
 package org.camunda.bpm.engine.cdi;
 
-import javax.enterprise.inject.Produces;
-import javax.enterprise.inject.Typed;
-import javax.inject.Inject;
-import javax.inject.Named;
-
 import org.camunda.bpm.engine.cdi.annotation.ExecutionId;
 import org.camunda.bpm.engine.cdi.annotation.ProcessInstanceId;
 import org.camunda.bpm.engine.cdi.annotation.TaskId;
 import org.camunda.bpm.engine.runtime.Execution;
 import org.camunda.bpm.engine.runtime.ProcessInstance;
 import org.camunda.bpm.engine.task.Task;
+
+import jakarta.enterprise.inject.Produces;
+import jakarta.enterprise.inject.Typed;
+import jakarta.inject.Inject;
+import jakarta.inject.Named;
 
 /**
  * Allows to access executions and tasks of a managed process instance via

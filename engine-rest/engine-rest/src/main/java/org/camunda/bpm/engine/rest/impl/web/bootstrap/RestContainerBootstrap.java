@@ -16,10 +16,10 @@
  */
 package org.camunda.bpm.engine.rest.impl.web.bootstrap;
 
-import javax.servlet.ServletContextEvent;
-import javax.servlet.ServletContextListener;
-
 import org.camunda.bpm.engine.rest.util.WebApplicationUtil;
+
+import jakarta.servlet.ServletContextEvent;
+import jakarta.servlet.ServletContextListener;
 
 public class RestContainerBootstrap implements ServletContextListener {
 

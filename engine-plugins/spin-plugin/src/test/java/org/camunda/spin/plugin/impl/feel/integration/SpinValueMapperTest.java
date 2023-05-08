@@ -56,7 +56,7 @@ public class SpinValueMapperTest {
     SpinValueMapper spinValueMapper = new SpinValueMapper();
     List<CustomValueMapper> mapperList = Arrays.asList(defaultValueMapper, spinValueMapper);
     valueMapper = new ValueMapper
-        .CompositeValueMapper(ListHasAsScala(mapperList).asScala().toList());
+        .CompositeValueMapper(ListHasAsScala(mapperList).asScala().coll().toList());
   }
 
   @Test

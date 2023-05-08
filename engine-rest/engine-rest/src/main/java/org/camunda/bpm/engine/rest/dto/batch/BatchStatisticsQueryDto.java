@@ -24,8 +24,6 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
-import javax.ws.rs.core.MultivaluedMap;
-
 import org.camunda.bpm.engine.ProcessEngine;
 import org.camunda.bpm.engine.batch.BatchStatisticsQuery;
 import org.camunda.bpm.engine.rest.dto.AbstractQueryDto;
@@ -35,6 +33,8 @@ import org.camunda.bpm.engine.rest.dto.converter.DateConverter;
 import org.camunda.bpm.engine.rest.dto.converter.StringListConverter;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+
+import jakarta.ws.rs.core.MultivaluedMap;
 
 public class BatchStatisticsQueryDto extends AbstractQueryDto<BatchStatisticsQuery> {
 

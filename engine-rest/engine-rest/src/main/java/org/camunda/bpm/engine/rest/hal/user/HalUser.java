@@ -22,7 +22,7 @@ import org.camunda.bpm.engine.rest.hal.HalIdResource;
 import org.camunda.bpm.engine.rest.hal.HalRelation;
 import org.camunda.bpm.engine.rest.hal.HalResource;
 
-import javax.ws.rs.core.UriBuilder;
+import jakarta.ws.rs.core.UriBuilder;
 
 /**
  * @author Daniel Meyer

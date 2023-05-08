@@ -23,7 +23,7 @@ import static org.mockito.Mockito.inOrder;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
-import javax.ws.rs.core.Response.Status;
+import jakarta.ws.rs.core.Response.Status;
 
 import org.camunda.bpm.engine.AuthorizationException;
 import org.camunda.bpm.engine.HistoryService;

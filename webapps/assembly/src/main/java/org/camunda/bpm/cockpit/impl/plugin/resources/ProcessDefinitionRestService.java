@@ -16,8 +16,8 @@
  */
 package org.camunda.bpm.cockpit.impl.plugin.resources;
 
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
+import jakarta.ws.rs.Path;
+import jakarta.ws.rs.PathParam;
 
 import org.camunda.bpm.cockpit.impl.plugin.base.sub.resources.ProcessDefinitionResource;
 import org.camunda.bpm.cockpit.plugin.resource.AbstractPluginResource;

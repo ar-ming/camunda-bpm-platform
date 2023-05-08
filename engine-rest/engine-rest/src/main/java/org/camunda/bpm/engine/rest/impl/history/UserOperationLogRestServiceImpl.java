@@ -18,8 +18,8 @@ package org.camunda.bpm.engine.rest.impl.history;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.util.List;
-import javax.ws.rs.core.Response;
-import javax.ws.rs.core.UriInfo;
+import jakarta.ws.rs.core.Response;
+import jakarta.ws.rs.core.UriInfo;
 import org.camunda.bpm.engine.ProcessEngine;
 import org.camunda.bpm.engine.history.UserOperationLogQuery;
 import org.camunda.bpm.engine.rest.dto.AnnotationDto;

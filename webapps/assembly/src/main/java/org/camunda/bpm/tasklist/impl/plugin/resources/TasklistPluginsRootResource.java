@@ -16,7 +16,7 @@
  */
 package org.camunda.bpm.tasklist.impl.plugin.resources;
 
-import javax.ws.rs.Path;
+import jakarta.ws.rs.Path;
 
 import org.camunda.bpm.tasklist.impl.plugin.TasklistPlugins;
 import org.camunda.bpm.tasklist.resource.AbstractTasklistPluginRootResource;

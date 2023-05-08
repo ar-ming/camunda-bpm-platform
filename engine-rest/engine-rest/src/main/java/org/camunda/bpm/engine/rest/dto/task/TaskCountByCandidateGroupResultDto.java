@@ -22,7 +22,7 @@ import org.camunda.bpm.engine.rest.exception.InvalidRequestException;
 import org.camunda.bpm.engine.task.TaskCountByCandidateGroupResult;
 import org.camunda.bpm.engine.task.TaskReport;
 
-import javax.ws.rs.core.Response;
+import jakarta.ws.rs.core.Response;
 import java.util.List;
 
 /**

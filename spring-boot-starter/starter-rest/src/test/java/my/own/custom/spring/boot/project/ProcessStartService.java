@@ -16,14 +16,14 @@
  */
 package my.own.custom.spring.boot.project;
 
-import javax.ws.rs.POST;
-import javax.ws.rs.Path;
-
 import org.camunda.bpm.engine.RuntimeService;
 import org.camunda.bpm.engine.rest.dto.runtime.ProcessInstanceDto;
 import org.camunda.bpm.engine.runtime.ProcessInstance;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+
+import jakarta.ws.rs.POST;
+import jakarta.ws.rs.Path;
 
 @Component
 @Path("/process/start")

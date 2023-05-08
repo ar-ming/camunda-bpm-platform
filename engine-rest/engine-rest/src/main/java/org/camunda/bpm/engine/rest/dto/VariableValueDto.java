@@ -22,8 +22,8 @@ import java.util.Map.Entry;
 
 import javax.activation.MimeType;
 import javax.activation.MimeTypeParseException;
-import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.Response.Status;
+import jakarta.ws.rs.core.MediaType;
+import jakarta.ws.rs.core.Response.Status;
 
 import org.camunda.bpm.engine.ProcessEngine;
 import org.camunda.bpm.engine.impl.digest._apacheCommonsCodec.Base64;

@@ -19,7 +19,7 @@ package org.camunda.bpm.webapp.impl.util;
 import java.util.Iterator;
 import java.util.ServiceLoader;
 
-import javax.ws.rs.core.Response.Status;
+import jakarta.ws.rs.core.Response.Status;
 
 import org.camunda.bpm.engine.ProcessEngine;
 import org.camunda.bpm.engine.rest.exception.RestException;

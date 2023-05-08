@@ -19,8 +19,7 @@ package org.camunda.bpm.webapp.impl.security.auth;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import java.util.Date;
-import javax.ws.rs.core.Response;
-import javax.ws.rs.core.Response.Status;
+
 import org.camunda.bpm.engine.AuthorizationService;
 import org.camunda.bpm.engine.IdentityService;
 import org.camunda.bpm.engine.ProcessEngine;
@@ -38,6 +37,9 @@ import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.springframework.mock.web.MockHttpServletRequest;
+
+import jakarta.ws.rs.core.Response;
+import jakarta.ws.rs.core.Response.Status;
 
 /**
  * @author Thorben Lindhauer

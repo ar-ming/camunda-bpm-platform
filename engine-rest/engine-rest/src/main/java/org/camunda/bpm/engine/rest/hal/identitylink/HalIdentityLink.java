@@ -16,7 +16,7 @@
  */
 package org.camunda.bpm.engine.rest.hal.identitylink;
 
-import javax.ws.rs.core.UriBuilder;
+import jakarta.ws.rs.core.UriBuilder;
 
 import org.camunda.bpm.engine.rest.GroupRestService;
 import org.camunda.bpm.engine.rest.TaskRestService;

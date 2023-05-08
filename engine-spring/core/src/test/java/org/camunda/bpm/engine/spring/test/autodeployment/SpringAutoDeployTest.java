@@ -108,7 +108,7 @@ public class SpringAutoDeployTest extends PvmTestCase {
     assertEquals(3, processDefinitionQuery.count());
 
     // Creating a new app context with same resources doesn't lead to more deployments
-    ((AbstractXmlApplicationContext) applicationContext).destroy();
+    ((AbstractXmlApplicationContext) applicationContext).stop();
     applicationContext = new ClassPathXmlApplicationContext(CTX_PATH);
     assertEquals(1, deploymentQuery.count());
     assertEquals(3, processDefinitionQuery.count());
@@ -148,7 +148,7 @@ public class SpringAutoDeployTest extends PvmTestCase {
     assertEquals(1, repositoryService.createDeploymentQuery().count());
 
     // when
-    ((AbstractXmlApplicationContext) applicationContext).destroy();
+    ((AbstractXmlApplicationContext) applicationContext).stop();
 
     DynamicResourceProducer.clearResources();
     DynamicResourceProducer.addResource("a.bpmn", model2);
@@ -174,7 +174,7 @@ public class SpringAutoDeployTest extends PvmTestCase {
 
     createAppContext(CTX_DYNAMIC_DEPLOY_PATH);
     assertEquals(1, repositoryService.createDeploymentQuery().count());
-    ((AbstractXmlApplicationContext)applicationContext).destroy();
+    ((AbstractXmlApplicationContext)applicationContext).stop();
 
     // when
     DynamicResourceProducer.clearResources();

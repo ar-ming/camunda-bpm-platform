@@ -16,13 +16,13 @@
  */
 package org.camunda.bpm.spring.boot.starter.telemetry;
 
-import javax.servlet.ServletContext;
-
 import org.camunda.bpm.engine.ProcessEngine;
 import org.camunda.bpm.engine.impl.ManagementServiceImpl;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
+
+import jakarta.servlet.ServletContext;
 
 
 public class CamundaApplicationServerConfigurator implements InitializingBean {

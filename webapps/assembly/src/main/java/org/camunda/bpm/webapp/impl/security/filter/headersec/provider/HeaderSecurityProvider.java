@@ -16,9 +16,10 @@
  */
 package org.camunda.bpm.webapp.impl.security.filter.headersec.provider;
 
-import javax.servlet.ServletContext;
 import java.util.HashMap;
 import java.util.Map;
+
+import jakarta.servlet.ServletContext;
 
 /**
  * @author Tassilo Weidner

@@ -25,6 +25,7 @@ import org.camunda.bpm.model.xml.instance.ModelElementInstance;
  */
 public interface AttributeReferenceCollectionBuilder<T extends ModelElementInstance> extends AttributeReferenceBuilder<T> {
 
+@Override
   AttributeReferenceCollection<T> build();
 
 }

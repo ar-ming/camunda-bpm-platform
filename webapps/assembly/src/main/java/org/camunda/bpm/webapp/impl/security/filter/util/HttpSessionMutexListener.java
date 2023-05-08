@@ -16,9 +16,10 @@
  */
 package org.camunda.bpm.webapp.impl.security.filter.util;
 
-import javax.servlet.http.HttpSessionEvent;
-import javax.servlet.http.HttpSessionListener;
 import java.io.Serializable;
+
+import jakarta.servlet.http.HttpSessionEvent;
+import jakarta.servlet.http.HttpSessionListener;
 
 /**
  * Automatically creates a session mutex when a HttpSession

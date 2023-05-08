@@ -24,12 +24,6 @@ import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import javax.servlet.FilterChain;
-import javax.servlet.ServletContext;
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
 import org.camunda.bpm.admin.Admin;
 import org.camunda.bpm.admin.AdminRuntimeDelegate;
 import org.camunda.bpm.cockpit.Cockpit;
@@ -39,15 +33,21 @@ import org.camunda.bpm.engine.authorization.Groups;
 import org.camunda.bpm.engine.rest.util.WebApplicationUtil;
 import org.camunda.bpm.tasklist.Tasklist;
 import org.camunda.bpm.tasklist.TasklistRuntimeDelegate;
-import org.camunda.bpm.webapp.impl.security.filter.headersec.provider.impl.ContentSecurityPolicyProvider;
-import org.camunda.bpm.webapp.impl.util.ServletContextUtil;
 import org.camunda.bpm.webapp.impl.IllegalWebAppConfigurationException;
 import org.camunda.bpm.webapp.impl.filter.AbstractTemplateFilter;
 import org.camunda.bpm.webapp.impl.security.SecurityActions;
 import org.camunda.bpm.webapp.impl.security.SecurityActions.SecurityAction;
+import org.camunda.bpm.webapp.impl.security.filter.headersec.provider.impl.ContentSecurityPolicyProvider;
+import org.camunda.bpm.webapp.impl.util.ServletContextUtil;
 import org.camunda.bpm.webapp.plugin.spi.AppPlugin;
 import org.camunda.bpm.welcome.Welcome;
 import org.camunda.bpm.welcome.WelcomeRuntimeDelegate;
+
+import jakarta.servlet.FilterChain;
+import jakarta.servlet.ServletContext;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 /**
  *

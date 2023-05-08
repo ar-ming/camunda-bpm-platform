@@ -16,9 +16,9 @@
  */
 package org.camunda.bpm.engine.cdi.test;
 
-import io.quarkus.arc.Arc;
-import io.quarkus.arc.InjectableInstance;
-import io.quarkus.arc.InstanceHandle;
+import java.util.HashSet;
+import java.util.Set;
+
 import org.camunda.bpm.BpmPlatform;
 import org.camunda.bpm.engine.AuthorizationService;
 import org.camunda.bpm.engine.CaseService;
@@ -39,11 +39,12 @@ import org.camunda.bpm.quarkus.engine.extension.QuarkusProcessEngineConfiguratio
 import org.junit.After;
 import org.junit.Before;
 
-import javax.enterprise.context.ApplicationScoped;
-import javax.enterprise.inject.Produces;
-import javax.enterprise.inject.spi.BeanManager;
-import java.util.HashSet;
-import java.util.Set;
+import io.quarkus.arc.Arc;
+import io.quarkus.arc.InjectableInstance;
+import io.quarkus.arc.InstanceHandle;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.enterprise.inject.Produces;
+import jakarta.enterprise.inject.spi.BeanManager;
 
 public class CdiProcessEngineTestCase {
 

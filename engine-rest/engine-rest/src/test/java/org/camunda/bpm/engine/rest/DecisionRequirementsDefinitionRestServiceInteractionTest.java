@@ -34,7 +34,7 @@ import java.io.InputStream;
 import java.net.URISyntaxException;
 import java.util.Collections;
 
-import javax.ws.rs.core.Response.Status;
+import jakarta.ws.rs.core.Response.Status;
 
 import org.camunda.bpm.engine.DecisionService;
 import org.camunda.bpm.engine.ProcessEngineException;

@@ -16,17 +16,17 @@
  */
 package org.camunda.bpm.engine.rest;
 
-import javax.ws.rs.Consumes;
-import javax.ws.rs.POST;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
-import javax.ws.rs.core.MediaType;
-
 import org.camunda.bpm.engine.rest.dto.batch.BatchDto;
 import org.camunda.bpm.engine.rest.dto.migration.MigrationExecutionDto;
 import org.camunda.bpm.engine.rest.dto.migration.MigrationPlanDto;
 import org.camunda.bpm.engine.rest.dto.migration.MigrationPlanGenerationDto;
 import org.camunda.bpm.engine.rest.dto.migration.MigrationPlanReportDto;
+
+import jakarta.ws.rs.Consumes;
+import jakarta.ws.rs.POST;
+import jakarta.ws.rs.Path;
+import jakarta.ws.rs.Produces;
+import jakarta.ws.rs.core.MediaType;
 
 public interface MigrationRestService {
 

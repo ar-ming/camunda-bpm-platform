@@ -16,15 +16,16 @@
  */
 package org.camunda.bpm.webapp.impl.util;
 
+import java.util.Date;
+
 import org.camunda.bpm.engine.impl.util.ClockUtil;
 import org.camunda.bpm.webapp.impl.security.auth.AuthenticationFilter;
 import org.camunda.bpm.webapp.impl.security.auth.UserAuthenticationResource;
 
-import javax.servlet.FilterChain;
-import javax.servlet.ServletContext;
-import javax.servlet.ServletRequest;
-import javax.servlet.ServletResponse;
-import java.util.Date;
+import jakarta.servlet.FilterChain;
+import jakarta.servlet.ServletContext;
+import jakarta.servlet.ServletRequest;
+import jakarta.servlet.ServletResponse;
 
 /**
  * With Camunda Platform 7.13 we introduced the application path prefix /camunda to Spring Boot.

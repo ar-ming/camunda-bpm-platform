@@ -20,8 +20,6 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 
-import javax.servlet.Filter;
-
 import org.camunda.bpm.spring.boot.starter.webapp.filter.LazyDelegateFilter.InitHook;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -30,6 +28,8 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.context.event.ContextClosedEvent;
 import org.springframework.context.event.EventListener;
+
+import jakarta.servlet.Filter;
 
 public class LazyInitRegistration implements ApplicationContextAware {
 

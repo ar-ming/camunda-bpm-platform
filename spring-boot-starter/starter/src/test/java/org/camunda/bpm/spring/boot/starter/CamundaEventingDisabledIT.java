@@ -16,6 +16,8 @@
  */
 package org.camunda.bpm.spring.boot.starter;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 import org.camunda.bpm.engine.RuntimeService;
 import org.camunda.bpm.engine.TaskService;
 import org.camunda.bpm.engine.repository.ProcessDefinition;
@@ -33,9 +35,7 @@ import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import javax.transaction.Transactional;
-
-import static org.assertj.core.api.Assertions.assertThat;
+import jakarta.transaction.Transactional;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(

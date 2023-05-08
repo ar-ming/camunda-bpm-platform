@@ -16,7 +16,7 @@
  */
 package org.camunda.bpm.engine.rest.hal.processDefinition;
 
-import javax.ws.rs.core.UriBuilder;
+import jakarta.ws.rs.core.UriBuilder;
 
 import org.camunda.bpm.engine.ProcessEngine;
 import org.camunda.bpm.engine.repository.ProcessDefinition;

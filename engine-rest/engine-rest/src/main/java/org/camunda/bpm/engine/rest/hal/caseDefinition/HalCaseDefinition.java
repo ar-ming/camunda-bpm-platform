@@ -26,7 +26,7 @@ import org.camunda.bpm.engine.rest.hal.HalResource;
 import org.camunda.bpm.engine.rest.sub.repository.DeploymentResourcesResource;
 import org.camunda.bpm.engine.rest.util.ApplicationContextPathUtil;
 
-import javax.ws.rs.core.UriBuilder;
+import jakarta.ws.rs.core.UriBuilder;
 
 /**
  * @author Daniel Meyer

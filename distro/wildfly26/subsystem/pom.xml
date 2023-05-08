@@ -38,7 +38,7 @@
 
     <dependency>
       <groupId>org.wildfly</groupId>
-      <artifactId>wildfly-web-common</artifactId>
+      <artifactId>wildfly-web-common-jakarta</artifactId>
       <version>${version.wildfly26}</version>
       <scope>provided</scope>
       <exclusions>
@@ -52,8 +52,8 @@
 
     <dependency>
       <groupId>org.wildfly</groupId>
-      <artifactId>wildfly-ejb3</artifactId>
-      <version>${version.wildfly26}</version>
+      <artifactId>wildfly-ejb3-jakarta</artifactId>
+      <version>${version.wildfly}</version>
       <scope>provided</scope>
       <exclusions>
       <!-- we need to exclude picketbox, because it uses a version only available in an early access repository -->

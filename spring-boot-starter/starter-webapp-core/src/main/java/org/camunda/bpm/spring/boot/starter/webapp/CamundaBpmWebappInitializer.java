@@ -23,13 +23,6 @@ import java.util.Collections;
 import java.util.EnumSet;
 import java.util.Map;
 
-import javax.servlet.DispatcherType;
-import javax.servlet.Filter;
-import javax.servlet.FilterRegistration;
-import javax.servlet.ServletContext;
-import javax.servlet.ServletRegistration;
-import javax.servlet.SessionTrackingMode;
-
 import org.camunda.bpm.admin.impl.web.AdminApplication;
 import org.camunda.bpm.admin.impl.web.bootstrap.AdminContainerBootstrap;
 import org.camunda.bpm.cockpit.impl.web.CockpitApplication;
@@ -55,6 +48,13 @@ import org.glassfish.jersey.servlet.ServletContainer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.web.servlet.ServletContextInitializer;
+
+import jakarta.servlet.DispatcherType;
+import jakarta.servlet.Filter;
+import jakarta.servlet.FilterRegistration;
+import jakarta.servlet.ServletContext;
+import jakarta.servlet.ServletRegistration;
+import jakarta.servlet.SessionTrackingMode;
 
 /**
  * Inspired by:
@@ -86,7 +86,6 @@ public class CamundaBpmWebappInitializer implements ServletContextInitializer {
     servletContext.addListener(new TasklistContainerBootstrap());
     servletContext.addListener(new WelcomeContainerBootstrap());
     servletContext.addListener(new HttpSessionMutexListener());
-
     WebappProperty webapp = properties.getWebapp();
     String applicationPath = webapp.getApplicationPath();
 

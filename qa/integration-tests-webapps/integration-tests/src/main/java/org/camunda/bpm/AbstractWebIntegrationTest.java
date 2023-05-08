@@ -19,7 +19,7 @@ package org.camunda.bpm;
 import java.util.List;
 import java.util.logging.Logger;
 
-import javax.ws.rs.core.MediaType;
+import jakarta.ws.rs.core.MediaType;
 
 import org.camunda.bpm.util.TestUtil;
 import org.junit.After;

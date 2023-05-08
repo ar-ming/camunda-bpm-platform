@@ -25,7 +25,11 @@
       <artifactId>camunda-bpm-spring-boot-starter-webapp</artifactId>
       <scope>provided</scope>
     </dependency>
-
+    <dependency>
+      <groupId>jakarta.annotation</groupId>
+      <artifactId>jakarta.annotation-api</artifactId>
+      <version>2.1.1</version>
+    </dependency>
     <dependency>
       <groupId>org.camunda.bpm.example</groupId>
       <artifactId>camunda-example-invoice</artifactId>

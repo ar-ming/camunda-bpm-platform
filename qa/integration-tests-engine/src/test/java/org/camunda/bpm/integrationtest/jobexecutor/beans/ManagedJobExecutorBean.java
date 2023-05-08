@@ -19,11 +19,13 @@ package org.camunda.bpm.integrationtest.jobexecutor.beans;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 import javax.annotation.Resource;
-import javax.ejb.Singleton;
-import javax.ejb.Startup;
-import javax.enterprise.concurrent.ManagedExecutorService;
+import jakarta.enterprise.concurrent.ManagedExecutorService;
+
 import org.camunda.bpm.engine.ProcessEngine;
 import org.camunda.bpm.engine.cdi.impl.ManagedJobExecutor;
+
+import jakarta.ejb.Singleton;
+import jakarta.ejb.Startup;
 
 @Startup
 @Singleton

@@ -42,15 +42,17 @@
         <artifactId>activation</artifactId>
         <version>1.1</version>
       </dependency>
+
     </dependencies>
   </dependencyManagement>
 
   <dependencies>
 
     <!-- jee spec -->
+    <!--
     <dependency>
       <groupId>org.jboss.spec</groupId>
-      <artifactId>jboss-javaee-6.0</artifactId>
+      <artifactId>jboss-jakartaee-8.0</artifactId>
       <type>pom</type>
       <scope>provided</scope>
       <exclusions>
@@ -60,18 +62,19 @@
         </exclusion>
       </exclusions>
     </dependency>
-
+	-->
     <dependency>
-      <groupId>org.jboss.spec.javax.ws.rs</groupId>
-      <artifactId>jboss-jaxrs-api_2.1_spec</artifactId>
+      <groupId>jakarta.servlet</groupId>
+      <artifactId>jakarta.servlet-api</artifactId>
       <scope>provided</scope>
-    </dependency>
+    </dependency>	
+    <dependency>
+      <groupId>jakarta.ws.rs</groupId>
+      <artifactId>jakarta.ws.rs-api</artifactId>
+      <scope>provided</scope>
+    </dependency>     
 
     <!-- rest api -->
-    <dependency>
-      <groupId>org.camunda.bpm</groupId>
-      <artifactId>camunda-engine-rest-core</artifactId>
-    </dependency>
 
     <dependency>
       <groupId>org.springframework</groupId>
@@ -86,14 +89,16 @@
       <version>${version.spring.framework}</version>
       <scope>test</scope>
     </dependency>
-
     <dependency>
-      <groupId>org.camunda.bpm</groupId>
-      <artifactId>camunda-engine-rest-core</artifactId>
-      <version>${project.version}</version>
-      <scope>test</scope>
-      <classifier>tests</classifier>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
+      <version>${version.jackson}</version>
     </dependency>
+    <dependency>
+      <groupId>com.fasterxml.jackson.jakarta.rs</groupId>
+      <artifactId>jackson-jakarta-rs-json-provider</artifactId>
+      <version>${version.jackson}</version>
+	</dependency>   
   </dependencies>
 
   <build>
@@ -195,10 +200,12 @@
           <artifactId>resteasy-jaxrs</artifactId>
           <scope>runtime</scope>
         </dependency>
+        <!--
         <dependency>
           <groupId>org.jboss.spec.javax.ws.rs</groupId>
           <artifactId>jboss-jaxrs-api_2.1_spec</artifactId>
         </dependency>
+        -->
         <dependency>
           <groupId>org.camunda.bpm</groupId>
           <artifactId>camunda-engine</artifactId>
@@ -475,10 +482,12 @@
           from the main dependency declaration here or
           else the dependency will not be available in Jetty
           (see also Jetty plugin config option useProvidedScope) -->
+          <!--
         <dependency>
           <groupId>org.jboss.spec.javax.ws.rs</groupId>
           <artifactId>jboss-jaxrs-api_2.1_spec</artifactId>
         </dependency>
+        -->
       </dependencies>
       <build>
         <plugins>

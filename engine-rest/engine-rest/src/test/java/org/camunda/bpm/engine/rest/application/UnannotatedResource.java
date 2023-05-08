@@ -16,16 +16,17 @@
  */
 package org.camunda.bpm.engine.rest.application;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.camunda.bpm.engine.AuthorizationException;
 import org.camunda.bpm.engine.ProcessEngineException;
 import org.camunda.bpm.engine.authorization.MissingAuthorization;
 import org.camunda.bpm.engine.rest.exception.RestException;
 
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.core.Response.Status;
-import java.util.ArrayList;
-import java.util.List;
+import jakarta.ws.rs.GET;
+import jakarta.ws.rs.Path;
+import jakarta.ws.rs.core.Response.Status;
 
 /**
  * Does not declare produced media types.

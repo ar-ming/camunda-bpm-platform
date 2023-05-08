@@ -16,18 +16,8 @@
  */
 package org.camunda.bpm.quarkus.engine.extension.deployment.impl;
 
-import io.quarkus.arc.deployment.AdditionalBeanBuildItem;
-import io.quarkus.arc.deployment.BeanContainerBuildItem;
-import io.quarkus.arc.deployment.ContextRegistrationPhaseBuildItem;
-import io.quarkus.arc.deployment.UnremovableBeanBuildItem;
-import io.quarkus.arc.runtime.BeanContainer;
-import io.quarkus.deployment.annotations.BuildProducer;
-import io.quarkus.deployment.annotations.BuildStep;
-import io.quarkus.deployment.annotations.Consume;
-import io.quarkus.deployment.annotations.Record;
-import io.quarkus.deployment.builditem.FeatureBuildItem;
-import io.quarkus.deployment.builditem.ShutdownContextBuildItem;
-import io.quarkus.runtime.RuntimeValue;
+import static io.quarkus.deployment.annotations.ExecutionTime.RUNTIME_INIT;
+
 import org.camunda.bpm.engine.cdi.BusinessProcess;
 import org.camunda.bpm.engine.cdi.ProcessVariables;
 import org.camunda.bpm.engine.cdi.annotation.BusinessProcessScoped;
@@ -40,15 +30,25 @@ import org.camunda.bpm.engine.cdi.impl.context.RequestScopedAssociation;
 import org.camunda.bpm.engine.cdi.jsf.TaskForm;
 import org.camunda.bpm.engine.impl.cfg.ProcessEngineConfigurationImpl;
 import org.camunda.bpm.quarkus.engine.extension.CamundaEngineConfig;
+import org.camunda.bpm.quarkus.engine.extension.QuarkusProcessEngineConfiguration;
 import org.camunda.bpm.quarkus.engine.extension.impl.CamundaEngineRecorder;
 import org.camunda.bpm.quarkus.engine.extension.impl.InjectableBusinessProcessContext;
-import org.camunda.bpm.quarkus.engine.extension.QuarkusProcessEngineConfiguration;
 import org.jboss.jandex.DotName;
 
-import javax.enterprise.context.Dependent;
-
-import static io.quarkus.arc.deployment.ContextRegistrationPhaseBuildItem.ContextConfiguratorBuildItem;
-import static io.quarkus.deployment.annotations.ExecutionTime.RUNTIME_INIT;
+import io.quarkus.arc.deployment.AdditionalBeanBuildItem;
+import io.quarkus.arc.deployment.BeanContainerBuildItem;
+import io.quarkus.arc.deployment.ContextRegistrationPhaseBuildItem;
+import io.quarkus.arc.deployment.ContextRegistrationPhaseBuildItem.ContextConfiguratorBuildItem;
+import io.quarkus.arc.deployment.UnremovableBeanBuildItem;
+import io.quarkus.arc.runtime.BeanContainer;
+import io.quarkus.deployment.annotations.BuildProducer;
+import io.quarkus.deployment.annotations.BuildStep;
+import io.quarkus.deployment.annotations.Consume;
+import io.quarkus.deployment.annotations.Record;
+import io.quarkus.deployment.builditem.FeatureBuildItem;
+import io.quarkus.deployment.builditem.ShutdownContextBuildItem;
+import io.quarkus.runtime.RuntimeValue;
+import jakarta.enterprise.context.Dependent;
 
 public class CamundaEngineProcessor {
 

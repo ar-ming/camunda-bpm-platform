@@ -17,12 +17,15 @@
 package org.camunda.bpm.application.impl;
 
 import java.util.Set;
-import javax.servlet.ServletContainerInitializer;
-import javax.servlet.ServletContext;
-import javax.servlet.ServletContextListener;
-import javax.servlet.ServletException;
-import javax.servlet.annotation.HandlesTypes;
+
+import jakarta.servlet.ServletContext;
+import jakarta.servlet.ServletContextListener;
+import jakarta.servlet.ServletException;
+
 import org.camunda.bpm.application.ProcessApplication;
+
+import jakarta.servlet.ServletContainerInitializer;
+import jakarta.servlet.annotation.HandlesTypes;
 
 /**
  * <p>This class is an implementation of {@link ServletContainerInitializer} and

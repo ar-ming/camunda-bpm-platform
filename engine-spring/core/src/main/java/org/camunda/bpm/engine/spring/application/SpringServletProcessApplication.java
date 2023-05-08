@@ -16,11 +16,11 @@
  */
 package org.camunda.bpm.engine.spring.application;
 
-import javax.servlet.ServletContext;
-
 import org.camunda.bpm.application.ProcessApplication;
 import org.camunda.bpm.application.ProcessApplicationInfo;
 import org.springframework.web.context.ServletContextAware;
+
+import jakarta.servlet.ServletContext;
 
 /**
  * <p>Process Application to be used in a Spring Web Application.</p>

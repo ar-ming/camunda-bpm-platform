@@ -19,8 +19,6 @@ package org.camunda.bpm.engine.spring.application;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import javax.servlet.ServletContext;
-
 import org.camunda.bpm.application.AbstractProcessApplication;
 import org.camunda.bpm.application.ProcessApplicationElResolver;
 import org.camunda.bpm.application.impl.EjbProcessApplication;
@@ -30,6 +28,8 @@ import org.camunda.bpm.engine.spring.ApplicationContextElResolver;
 import org.springframework.util.ClassUtils;
 import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.context.support.WebApplicationContextUtils;
+
+import jakarta.servlet.ServletContext;
 
 /**
  * <p>ProcessApplicationElResolver implementation providing support for the Spring Framework.</p>

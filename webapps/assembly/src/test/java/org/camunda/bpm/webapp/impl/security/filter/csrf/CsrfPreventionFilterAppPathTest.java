@@ -23,8 +23,8 @@ import org.springframework.mock.web.MockHttpServletResponse;
 import org.springframework.mock.web.MockHttpSession;
 import org.springframework.mock.web.MockServletContext;
 
-import javax.servlet.ServletException;
-import javax.ws.rs.core.Response;
+import jakarta.servlet.ServletException;
+import jakarta.ws.rs.core.Response;
 import java.io.IOException;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -68,7 +68,15 @@ public class CsrfPreventionFilterAppPathTest extends CsrfPreventionFilterTest {
 
     // when
     MockHttpServletResponse response = new MockHttpServletResponse();
-    applyFilter(nonModifyingRequest, response);
+    try {
+		applyFilter(nonModifyingRequest, response);
+	} catch (IOException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	} catch (jakarta.servlet.ServletException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
 
     // then
     String cookieToken = response.getHeader(SET_COOKIE_HEADER_NAME);

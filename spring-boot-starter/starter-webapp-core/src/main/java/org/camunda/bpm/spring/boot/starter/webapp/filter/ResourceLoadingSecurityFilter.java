@@ -19,15 +19,15 @@ package org.camunda.bpm.spring.boot.starter.webapp.filter;
 import java.io.IOException;
 import java.io.InputStream;
 
-import javax.servlet.FilterConfig;
-import javax.servlet.ServletException;
-
 import org.camunda.bpm.engine.impl.util.IoUtil;
 import org.camunda.bpm.spring.boot.starter.property.WebappProperty;
 import org.camunda.bpm.webapp.impl.security.filter.SecurityFilter;
 import org.camunda.bpm.webapp.impl.security.filter.util.FilterRules;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.ResourceLoader;
+
+import jakarta.servlet.FilterConfig;
+import jakarta.servlet.ServletException;
 
 public class ResourceLoadingSecurityFilter extends SecurityFilter implements ResourceLoaderDependingFilter {
 

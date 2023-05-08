@@ -16,12 +16,13 @@
  */
 package org.camunda.bpm.engine.impl.variable.serializer.jpa;
 
-import javax.persistence.EntityManagerFactory;
+import static org.camunda.bpm.engine.impl.util.EnsureUtil.ensureNotNull;
+
+import jakarta.persistence.EntityManagerFactory;
+
 import org.camunda.bpm.engine.ProcessEngineException;
 import org.camunda.bpm.engine.impl.interceptor.Session;
 import org.camunda.bpm.engine.impl.interceptor.SessionFactory;
-
-import static org.camunda.bpm.engine.impl.util.EnsureUtil.ensureNotNull;
 
 /**
  * @author Frederik Heremans

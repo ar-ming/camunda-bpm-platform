@@ -28,7 +28,7 @@ import static org.mockito.Mockito.when;
 import java.util.Collections;
 import java.util.List;
 
-import javax.ws.rs.core.Response.Status;
+import jakarta.ws.rs.core.Response.Status;
 
 import org.camunda.bpm.engine.AuthorizationException;
 import org.camunda.bpm.engine.impl.ActivityStatisticsQueryImpl;

@@ -24,10 +24,8 @@ import java.util.concurrent.BlockingQueue;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import javax.servlet.ServletContext;
-import javax.servlet.ServletContextEvent;
-import javax.ws.rs.container.AsyncResponse;
-import javax.ws.rs.core.Response.Status;
+import jakarta.ws.rs.container.AsyncResponse;
+import jakarta.ws.rs.core.Response.Status;
 
 import org.camunda.bpm.engine.IdentityService;
 import org.camunda.bpm.engine.ProcessEngine;
@@ -43,6 +41,9 @@ import org.camunda.bpm.engine.rest.exception.InvalidRequestException;
 import org.camunda.bpm.engine.rest.exception.RestException;
 import org.camunda.bpm.engine.rest.spi.FetchAndLockHandler;
 import org.camunda.bpm.engine.rest.util.EngineUtil;
+
+import jakarta.servlet.ServletContext;
+import jakarta.servlet.ServletContextEvent;
 
 
 /**

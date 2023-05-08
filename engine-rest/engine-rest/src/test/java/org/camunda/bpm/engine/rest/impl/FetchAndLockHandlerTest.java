@@ -37,8 +37,8 @@ import org.mockito.Mock;
 import org.mockito.Spy;
 import org.mockito.junit.MockitoJUnitRunner;
 
-import javax.ws.rs.container.AsyncResponse;
-import javax.ws.rs.core.Response.Status;
+import jakarta.ws.rs.container.AsyncResponse;
+import jakarta.ws.rs.core.Response.Status;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Date;

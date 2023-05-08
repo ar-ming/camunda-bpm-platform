@@ -16,14 +16,16 @@
  */
 package org.camunda.bpm.engine.rest.impl;
 
+import java.util.Iterator;
+import java.util.ServiceLoader;
+
+import jakarta.ws.rs.core.Response;
+
 import org.camunda.bpm.engine.rest.exception.RestException;
 import org.camunda.bpm.engine.rest.spi.FetchAndLockHandler;
 
-import javax.servlet.ServletContextEvent;
-import javax.servlet.ServletContextListener;
-import javax.ws.rs.core.Response;
-import java.util.Iterator;
-import java.util.ServiceLoader;
+import jakarta.servlet.ServletContextEvent;
+import jakarta.servlet.ServletContextListener;
 
 /**
  * @author Tassilo Weidner

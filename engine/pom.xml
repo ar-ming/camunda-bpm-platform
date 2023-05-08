@@ -159,11 +159,18 @@
       <artifactId>java-uuid-generator</artifactId>
       <scope>provided</scope>
     </dependency>
-
+	<!--
     <dependency>
       <groupId>org.jboss.spec</groupId>
       <artifactId>jboss-javaee-web-6.0</artifactId>
       <type>pom</type>
+      <scope>provided</scope>
+    </dependency>
+	-->
+		
+    <dependency>
+      <groupId>jakarta.ejb</groupId>
+      <artifactId>jakarta.ejb-api</artifactId>
       <scope>provided</scope>
     </dependency>
 
@@ -172,7 +179,11 @@
       <artifactId>jakarta.transaction-api</artifactId>
       <scope>provided</scope>
     </dependency>
-
+    <dependency>
+      <groupId>jakarta.persistence</groupId>
+      <artifactId>jakarta.persistence-api</artifactId>
+      <scope>provided</scope>
+    </dependency>
     <dependency>
       <groupId>jakarta.servlet</groupId>
       <artifactId>jakarta.servlet-api</artifactId>

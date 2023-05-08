@@ -45,11 +45,12 @@
       </exclusions>
     </dependency>
     <dependency>
-      <groupId>javax.enterprise.concurrent</groupId>
-      <artifactId>javax.enterprise.concurrent-api</artifactId>
-      <version>1.0</version>
+      <groupId>jakarta.enterprise.concurrent</groupId>
+      <artifactId>jakarta.enterprise.concurrent-api</artifactId>
+      <version>3.0.2</version>
       <scope>provided</scope>
     </dependency>
+    <!--
     <dependency>
       <groupId>org.jboss.spec</groupId>
       <artifactId>jboss-javaee-6.0</artifactId>
@@ -62,7 +63,13 @@
         </exclusion>
       </exclusions>
     </dependency>
-
+  -->
+  	<dependency>
+      <groupId>jakarta.platform</groupId>
+      <artifactId>jakarta.jakartaee-api</artifactId>
+      <version>${version.jakarta-ee-spec}</version>
+      <scope>provided</scope>
+	</dependency>
     <dependency>
       <groupId>org.jboss.arquillian.junit</groupId>
       <artifactId>arquillian-junit-container</artifactId>

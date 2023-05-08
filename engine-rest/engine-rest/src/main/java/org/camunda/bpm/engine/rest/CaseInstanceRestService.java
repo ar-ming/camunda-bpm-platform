@@ -16,17 +16,24 @@
  */
 package org.camunda.bpm.engine.rest;
 
+import java.util.List;
+
 import org.camunda.bpm.engine.rest.dto.CountResultDto;
 import org.camunda.bpm.engine.rest.dto.runtime.CaseInstanceDto;
 import org.camunda.bpm.engine.rest.dto.runtime.CaseInstanceQueryDto;
 import org.camunda.bpm.engine.rest.sub.runtime.CaseInstanceResource;
 import org.camunda.bpm.engine.runtime.CaseInstanceQuery;
 
-import javax.ws.rs.*;
-import javax.ws.rs.core.Context;
-import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.UriInfo;
-import java.util.List;
+import jakarta.ws.rs.Consumes;
+import jakarta.ws.rs.GET;
+import jakarta.ws.rs.POST;
+import jakarta.ws.rs.Path;
+import jakarta.ws.rs.PathParam;
+import jakarta.ws.rs.Produces;
+import jakarta.ws.rs.QueryParam;
+import jakarta.ws.rs.core.Context;
+import jakarta.ws.rs.core.MediaType;
+import jakarta.ws.rs.core.UriInfo;
 
 /**
  * @author Roman Smirnov

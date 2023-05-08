@@ -16,10 +16,10 @@
  */
 package org.camunda.bpm.engine.cdi.test.bean;
 
-import io.quarkus.arc.Unremovable;
 import org.camunda.bpm.engine.cdi.test.impl.beans.DeclarativeProcessController;
 
-import javax.enterprise.context.Dependent;
+import io.quarkus.arc.Unremovable;
+import jakarta.enterprise.context.Dependent;
 
 @Dependent
 @Unremovable

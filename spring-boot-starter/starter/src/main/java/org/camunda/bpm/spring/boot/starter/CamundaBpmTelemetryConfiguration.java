@@ -16,12 +16,12 @@
  */
 package org.camunda.bpm.spring.boot.starter;
 
-import javax.servlet.ServletContext;
-
 import org.camunda.bpm.spring.boot.starter.telemetry.CamundaApplicationServerConfigurator;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+
+import jakarta.servlet.ServletContext;
 
 @Configuration
 public class CamundaBpmTelemetryConfiguration {

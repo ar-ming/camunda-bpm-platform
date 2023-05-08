@@ -35,7 +35,7 @@ import org.camunda.bpm.engine.runtime.CaseExecution;
 import org.camunda.bpm.engine.runtime.CaseExecutionCommandBuilder;
 import org.camunda.bpm.engine.variable.value.TypedValue;
 
-import javax.ws.rs.core.Response.Status;
+import jakarta.ws.rs.core.Response.Status;
 import java.util.List;
 import java.util.Map;
 

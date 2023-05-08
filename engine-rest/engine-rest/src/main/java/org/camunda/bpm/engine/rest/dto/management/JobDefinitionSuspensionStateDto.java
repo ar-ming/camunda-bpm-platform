@@ -18,7 +18,7 @@ package org.camunda.bpm.engine.rest.dto.management;
 
 import java.util.Date;
 
-import javax.ws.rs.core.Response.Status;
+import jakarta.ws.rs.core.Response.Status;
 
 import org.camunda.bpm.engine.ProcessEngine;
 import org.camunda.bpm.engine.impl.calendar.DateTimeUtil;

@@ -42,7 +42,7 @@ import org.jboss.msc.service.StopContext;
 import org.jboss.msc.value.InjectedValue;
 
 import javax.sql.DataSource;
-import javax.transaction.TransactionManager;
+import jakarta.transaction.TransactionManager;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ExecutorService;

@@ -16,87 +16,88 @@
  */
 package org.camunda.bpm.engine.rest.filter;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.PushbackInputStream;
+
 import jakarta.servlet.ReadListener;
 import jakarta.servlet.ServletInputStream;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletRequestWrapper;
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.PushbackInputStream;
-import java.io.InputStream;
 
 public class EmptyBodyFilter extends AbstractEmptyBodyFilter {
 
-  @Override
-  public HttpServletRequestWrapper wrapRequest(HttpServletRequest req, boolean isBodyEmpty, PushbackInputStream requestBody) {
-    return new HttpServletRequestWrapper(req) {
+	@Override
+	public HttpServletRequestWrapper wrapRequest(HttpServletRequest req, boolean isBodyEmpty,
+			PushbackInputStream requestBody) {
+		return new HttpServletRequestWrapper(req) {
 
-      @Override
-      public ServletInputStream getInputStream() throws IOException {
+			@Override
+			public ServletInputStream getInputStream() throws IOException {
 
-        return new ServletInputStream() {
+				return new ServletInputStream() {
 
-          final InputStream inputStream = getRequestBody(isBodyEmpty, requestBody);
-          boolean finished = false;
+					final InputStream inputStream = getRequestBody(isBodyEmpty, requestBody);
+					boolean finished = false;
 
-          @Override
-          public boolean isFinished() {
-            return this.finished;
-          }
+					@Override
+					public boolean isFinished() {
+						return this.finished;
+					}
 
-          @Override
-          public boolean isReady() {
-            return true;
-          }
+					@Override
+					public boolean isReady() {
+						return true;
+					}
 
-          @Override
-          public void setReadListener(final ReadListener readListener) {
-            throw new UnsupportedOperationException();
-          }
+					@Override
+					public void setReadListener(final ReadListener readListener) {
+						throw new UnsupportedOperationException();
+					}
 
-          @Override
-          public int read() throws IOException {
-            int data = this.inputStream.read();
-            if (data == -1) {
-              this.finished = true;
-            }
-            return data;
-          }
+					@Override
+					public int read() throws IOException {
+						int data = this.inputStream.read();
+						if (data == -1) {
+							this.finished = true;
+						}
+						return data;
+					}
 
-          @Override
-          public int available() throws IOException {
-            return inputStream.available();
-          }
+					@Override
+					public int available() throws IOException {
+						return inputStream.available();
+					}
 
-          @Override
-          public void close() throws IOException {
-            inputStream.close();
-          }
+					@Override
+					public void close() throws IOException {
+						inputStream.close();
+					}
 
-          @Override
-          public synchronized void mark(int readlimit) {
-            inputStream.mark(readlimit);
-          }
+					@Override
+					public synchronized void mark(int readlimit) {
+						inputStream.mark(readlimit);
+					}
 
-          @Override
-          public synchronized void reset() throws IOException {
-            inputStream.reset();
-          }
+					@Override
+					public synchronized void reset() throws IOException {
+						inputStream.reset();
+					}
 
-          @Override
-          public boolean markSupported() {
-            return inputStream.markSupported();
-          }
+					@Override
+					public boolean markSupported() {
+						return inputStream.markSupported();
+					}
 
-        };
-      }
+				};
+			}
 
-      @Override
-      public BufferedReader getReader() throws IOException {
-        return EmptyBodyFilter.this.getReader(this.getInputStream());
-      }
+			@Override
+			public BufferedReader getReader() throws IOException {
+				return EmptyBodyFilter.this.getReader(this.getInputStream());
+			}
 
-    };
-  }
-
+		};
+	}
 }

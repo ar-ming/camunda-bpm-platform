@@ -23,7 +23,7 @@ import org.camunda.bpm.engine.history.ReportResult;
 import org.camunda.bpm.engine.rest.dto.history.HistoricProcessInstanceReportDto;
 import org.camunda.bpm.engine.rest.exception.InvalidRequestException;
 
-import javax.ws.rs.core.Response.Status;
+import jakarta.ws.rs.core.Response.Status;
 
 /**
  * @author Roman Smirnov

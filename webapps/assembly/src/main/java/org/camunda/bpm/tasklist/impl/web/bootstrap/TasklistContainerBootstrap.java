@@ -16,13 +16,13 @@
  */
 package org.camunda.bpm.tasklist.impl.web.bootstrap;
 
-import javax.servlet.ServletContextEvent;
-import javax.servlet.ServletContextListener;
-
 import org.camunda.bpm.container.RuntimeContainerDelegate;
 import org.camunda.bpm.engine.rest.util.WebApplicationUtil;
 import org.camunda.bpm.tasklist.Tasklist;
 import org.camunda.bpm.tasklist.impl.DefaultTasklistRuntimeDelegate;
+
+import jakarta.servlet.ServletContextEvent;
+import jakarta.servlet.ServletContextListener;
 
 /**
  * @author Roman Smirnov

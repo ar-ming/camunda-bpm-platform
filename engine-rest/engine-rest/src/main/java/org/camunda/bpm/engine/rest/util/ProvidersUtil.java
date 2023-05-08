@@ -16,11 +16,11 @@
  */
 package org.camunda.bpm.engine.rest.util;
 
-import org.camunda.bpm.engine.rest.exception.RestException;
+import jakarta.ws.rs.core.MediaType;
+import jakarta.ws.rs.ext.ContextResolver;
+import jakarta.ws.rs.ext.Providers;
 
-import javax.ws.rs.core.MediaType;
-import javax.ws.rs.ext.ContextResolver;
-import javax.ws.rs.ext.Providers;
+import org.camunda.bpm.engine.rest.exception.RestException;
 
 /**
  * @author Thorben Lindhauer

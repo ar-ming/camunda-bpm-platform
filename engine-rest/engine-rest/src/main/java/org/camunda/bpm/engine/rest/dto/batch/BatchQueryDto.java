@@ -23,8 +23,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import javax.ws.rs.core.MultivaluedMap;
-
 import org.camunda.bpm.engine.ProcessEngine;
 import org.camunda.bpm.engine.batch.BatchQuery;
 import org.camunda.bpm.engine.rest.dto.AbstractQueryDto;
@@ -33,6 +31,8 @@ import org.camunda.bpm.engine.rest.dto.converter.BooleanConverter;
 import org.camunda.bpm.engine.rest.dto.converter.StringListConverter;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+
+import jakarta.ws.rs.core.MultivaluedMap;
 
 public class BatchQueryDto extends AbstractQueryDto<BatchQuery> {
 

@@ -16,12 +16,13 @@
  */
 package org.camunda.bpm.application.impl;
 
-import javax.ejb.EJBException;
 import org.camunda.bpm.application.ProcessApplicationInterface;
 import org.camunda.bpm.application.ProcessApplicationReference;
 import org.camunda.bpm.application.ProcessApplicationUnavailableException;
 import org.camunda.bpm.engine.ProcessEngine;
 import org.camunda.bpm.engine.impl.ProcessEngineLogger;
+
+import jakarta.ejb.EJBException;
 
 /**
  * <p>A reference to an EJB process application.</p>

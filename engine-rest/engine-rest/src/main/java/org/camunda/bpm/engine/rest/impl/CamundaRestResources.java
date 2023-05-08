@@ -16,7 +16,8 @@
  */
 package org.camunda.bpm.engine.rest.impl;
 
-import com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider;
+import java.util.HashSet;
+import java.util.Set;
 
 import org.camunda.bpm.engine.rest.exception.ExceptionHandler;
 import org.camunda.bpm.engine.rest.exception.JsonMappingExceptionHandler;
@@ -27,8 +28,7 @@ import org.camunda.bpm.engine.rest.hal.JacksonHalJsonProvider;
 import org.camunda.bpm.engine.rest.mapper.JacksonConfigurator;
 import org.camunda.bpm.engine.rest.mapper.MultipartPayloadProvider;
 
-import java.util.HashSet;
-import java.util.Set;
+import com.fasterxml.jackson.jakarta.rs.json.JacksonJsonProvider;
 
 /**
  * <p>Class providing static methods returning all the resource classes provided by Camunda Platform.</p>

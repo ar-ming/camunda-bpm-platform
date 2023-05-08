@@ -16,11 +16,12 @@
  */
 package org.camunda.bpm.engine.rest.spi;
 
+import jakarta.ws.rs.container.AsyncResponse;
+
 import org.camunda.bpm.engine.ProcessEngine;
 import org.camunda.bpm.engine.rest.dto.externaltask.FetchExternalTasksExtendedDto;
 
-import javax.servlet.ServletContextEvent;
-import javax.ws.rs.container.AsyncResponse;
+import jakarta.servlet.ServletContextEvent;
 
 /**
  * SPI supposed to replace the default implementation of the long-polling fetch and lock handler

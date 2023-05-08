@@ -16,13 +16,13 @@
  */
 package org.camunda.bpm.admin.impl.web.bootstrap;
 
-import javax.servlet.ServletContextEvent;
-import javax.servlet.ServletContextListener;
-
 import org.camunda.bpm.admin.Admin;
 import org.camunda.bpm.admin.impl.DefaultAdminRuntimeDelegate;
 import org.camunda.bpm.container.RuntimeContainerDelegate;
 import org.camunda.bpm.engine.rest.util.WebApplicationUtil;
+
+import jakarta.servlet.ServletContextEvent;
+import jakarta.servlet.ServletContextListener;
 
 /**
  * @author Daniel Meyer

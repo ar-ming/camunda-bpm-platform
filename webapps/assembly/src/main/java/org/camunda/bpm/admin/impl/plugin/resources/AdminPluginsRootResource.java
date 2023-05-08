@@ -16,8 +16,8 @@
  */
 package org.camunda.bpm.admin.impl.plugin.resources;
 
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
+import jakarta.ws.rs.Path;
+import jakarta.ws.rs.PathParam;
 
 import org.camunda.bpm.admin.impl.plugin.AdminPlugins;
 import org.camunda.bpm.admin.resource.AbstractAdminPluginRootResource;

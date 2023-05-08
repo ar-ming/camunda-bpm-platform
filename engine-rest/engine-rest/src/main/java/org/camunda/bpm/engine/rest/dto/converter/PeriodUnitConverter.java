@@ -19,7 +19,7 @@ package org.camunda.bpm.engine.rest.dto.converter;
 import org.camunda.bpm.engine.query.PeriodUnit;
 import org.camunda.bpm.engine.rest.exception.InvalidRequestException;
 
-import javax.ws.rs.core.Response.Status;
+import jakarta.ws.rs.core.Response.Status;
 
 /**
  * @author Roman Smirnov
