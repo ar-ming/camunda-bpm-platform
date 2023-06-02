@@ -4,7 +4,7 @@
 
 How to use of maven:
 1.Add repository in maven configuration file or pom.xml:
-
+```
 <repository>
   <id>github</id>
   <url>https://maven.pkg.github.com/ar-ming/camunda-bpm-platform</url>
@@ -12,14 +12,15 @@ How to use of maven:
     <enabled>true</enabled>
   </snapshots>
 </repository>
-
+```
 2.Add dependency in pom.xml
+```
 <dependency>
     <groupId>org.camunda.bpm.springboot</groupId>
     <artifactId>camunda-bpm-spring-boot-starter-rest</artifactId>
     <version>7.20.0-SNAPSHOT</version>
 </dependency>
-
+```
 Camunda Platform 7 is a flexible framework for workflow and process automation. It's core is a native BPMN 2.0 process engine that runs inside the Java Virtual Machine. It can be embedded inside any Java application and any Runtime Container. It integrates with Java EE 6 and is a perfect match for the Spring Framework. On top of the process engine, you can choose from a stack of tools for human workflow management, operations & monitoring.
 
 - Web Site: https://www.camunda.org/
